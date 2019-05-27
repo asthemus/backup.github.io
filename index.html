@@ -45,7 +45,7 @@
 					<li><a href="#about_me" id="link1" class="headerNavLink">About Me</a></li>
 					<li><a href="#education" id="link2" class="headerNavLink cllb-active">Education</a></li>
 					<li><a href="#skills" id="link3" class="headerNavLink">Skills</a></li>
-					<li><a href="fashion.html">Projects</a></li>
+					<li><a href="#projects" id="link4" class="headerNavLink">Projects</a></li>
 					<li><a href="about.html">courses</a></li>
 					<li><a href="about.html">Experience</a></li>
 				</ul>
@@ -107,7 +107,7 @@
             </div>
           </div>  
         </div>
-      </div>
+      
 
     		
           <div class="row mb-5">
@@ -115,7 +115,7 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <div class="row block-9 ftco-animate">
                 <ul style="list-style: none;">
-                  <li><span class="text">Mar 2015 - Mar 2017</span></a></li>
+                  <li><span class="text">Mar 2015 - Mar 2017</span></li>
                 </ul>
             </div>
             </div>
@@ -139,7 +139,7 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <div class="row block-9 ftco-animate">
                 <ul style="list-style: none;">
-                  <li><span class="text">Mar 2013 - Mar 2015</span></a></li>
+                  <li><span class="text">Mar 2013 - Mar 2015</span></li>
                 </ul>
             </div>
             </div>
@@ -159,6 +159,7 @@
 
         </div>
         </div>
+      </div>
 
     	
     	<div class="container nav_sectioned_3" id="skills">
@@ -285,6 +286,40 @@
     		</div>
     	</div>
 
+      <div class="container nav_sectioned_4" id="projects">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Projects</h2>
+          </div>
+        </div>
+        <div class="row">
+        <div class="card ftco-animate" style="width: 18rem; border: none;">
+          <img src="images/grey.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Lost & Found Portal<br/>IIIT Allahabad</h5>
+            <p class="card-text">Web portal for IIITA students to report lost and found items.</p>
+            <p class="card-text">Implementation on PHP, mysql, Javascript</p>
+            <a href="https://github.com/asthemus/IIITA-lost-and-found" class="btn btn-primary"><img src="images/github.png" style="max-height: 25px; max-width: 25px;"></a>
+          </div>
+        </div>
+        <div class="card ftco-animate" style="border: none;">
+           &nbsp &nbsp &nbsp
+        </div>
+
+        <div class="card ftco-animate" style="width: 18rem; border: none;">
+          <img src="images/grey.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Placement Portal </h5>
+            <p class="card-text">Web portal for bridging gap between students and recruiters during campus placements.</p>
+            <p class="card-text">implementation using PHP, mySQL, Javascript, HTML, CSS</p>
+            <a href="https://github.com/asthemus/IIITA-lost-and-found" class="btn btn-primary"><img src="images/globe.png" style="max-height: 25px; max-width: 25px;"></a>
+          </div>
+        </div>   
+      </div>
+
+      </div>
+        
+
     
     </section>
     <footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -376,7 +411,7 @@
         var elemTop = $(elem).offset().top;
         var elemBottom = elemTop + $(elem).height();
 
-        return ((elemTop-docViewTop < 1) && (elemBottom-docViewTop>1));
+        return ((elemTop-docViewTop < 200) && (elemBottom-docViewTop>200));
     }
     
     function allInView() {
@@ -389,6 +424,9 @@
 
     if (isScrolledIntoView($(".nav_sectioned_3"))) $("#link3").addClass("cllb-active");
     else $("#link3").removeClass("cllb-active");
+
+    if (isScrolledIntoView($(".nav_sectioned_4"))) $("#link4").addClass("cllb-active");
+    else $("#link4").removeClass("cllb-active");
 
 
 }
